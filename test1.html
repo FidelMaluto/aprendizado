@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testes</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //localStorage.setItem('teste: ', 1);
+    //alert(localStorage.getItem('teste') );
+
+    // set key
+    //localStorage.test = 2;
+
+    // get key
+    //document.write(localStorage.test);
+
+    //remove key
+   //delete localStorage.test;
+
+   /**let key = 'length';
+    localStorage[key] = 0;
+
+    console.log(key)*/
+
+    // LAÇOS DE REPETIÇÕES COM LOCALSTOREGE!!
+    /*for(let i = 1; i < localStorage.length; i++){
+        let key = localStorage.key(i);
+        alert(`${key} : ${localStorage.getItem(key)}`)
+    }*/
+    
+  /* //boscando todos os últimos registros do localstorege na máquina!! 
+   for(let key in localStorage){
+    alert(key);
+   }*/
+
+   //boscando todos os últimos registos cadastrados em nos respectivos campos do localstorege na máquina!! 
+  /*for(let key in localStorage){
+    if(!localStorage.hasOwnProperty(key)){
+        continue;
+    }
+        alert(`${key} : ${localStorage.getItem(key)}`)
+  }*/
+ /*
+    //boscando todos os últimos(recentes) registos cadastrados em nos respectivos campos 
+    // do localstorege na máquina!! com (OBJECT.keys) 
+    let keys = Object.keys(localStorage);
+    for(let key of keys){
+        alert(`${key} : ${localStorage(key)}`)
+    }
+    // STRING ONLY
+    localStorage.user = {name: "Fidel"};
+    alert(localStorage.user); 
+
+    localStorage.user = JSON.stringify({name: "FIDEL"});
+    let user = JSON.parse(localStorage.user);
+    alert(user.name);
+
+    // retornando todos os últimos registos de forma complexa.
+    document.write(JSON.stringify(localStorage, null, 2));}*/
+
+    /*
+   //SESSION STORAGE
+
+   sessionStorage.setItem('test', 1);
+   alert( sessionStorage.getItem('test'))
+*/
+    /*
+    //STOREGE EVENT
+    
+   window.onstorage = event =>{
+    if(event.key != 'now') return;
+    alert(event.key + " : " + event.newValue + " at " + event.url);
+   };
+   localStorage.setItem('now', Date.now());*/
+</script>
+</html>
