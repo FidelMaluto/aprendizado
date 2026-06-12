@@ -1,4 +1,4 @@
-let man = 9;
+let man = 10;
 
 switch(man){
     case 7:

@@ -5,7 +5,7 @@
 // devem ser entregues
 
 const notas = [185, 100, 50, 20, 10, 5, 2]
-let valor = 185;
+let valor = 1500;
 
 for(let i = 0; i < notas.length; i++){
     let nota = notas[i];
