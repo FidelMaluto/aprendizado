@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nivCap</title>
+
 </head>
+
 <body>
+
     <div class="body">
+
         <div class="element">
             <input type="text" placeholder="Digite tarefa" id="FieldInput">
             <button onclick="AddTask()">Adicionar</button>
         </div>
+
         <div class="product">
             <ul id="Tasks"></ul>
         </div>
+
     </div>
-</body>
-<script>
-    let FieldInput = document.getElementById("FieldInput");
-    let Tasks = document.getElementById("Tasks");
 
-    function AddTask(){
-        let newTask = FieldInput.value.trim();
+    <script>
+        let FieldInput = document.getElementById("FieldInput");
+        let Tasks = document.getElementById("Tasks");
 
-        if(newTask !== ""){
-            let li = document.createElement("li");
-            li.innerHTML = `
+        function AddTask() {
+            let newTask = FieldInput.value.trim();
+
+            if (newTask !== "") {
+                let li = document.createElement("li");
+                li.innerHTML = `
             <span>${newTask}</span>
             <button class="editButt" onclick="editButt(this)">Editar</button>
             <button class="removButt" onclick="removButt(this)">Apagar</button>
             `;
-             
-            //ADICIONANDO A TAREFA COM O APPENDCHILD
-            Tasks.appendChild(li);
-            FieldInput.value = "";
+
+                //ADICIONANDO A TAREFA COM O APPENDCHILD
+                Tasks.appendChild(li);
+                FieldInput.value = "";
+
+            }
 
         }
+        function editButt(button) {
+            let li = button.parentElement;
+            let span = li.querySelector("span");
+            let n = FieldInput.trim();
+            let editedTask = prompt("Editar: ", span.textContent);
 
-    }
-    function editButt(button){
-        let li = button.parentElement;
-        let span = li.querySelector("span");
-        let n = FieldInput.trim();
-        let editedTask = prompt("Editar: ", span.textContent);
-
-        if(editedTask !== null && editedTask.trim() !== ""){
-            span.textContent = editedTask.trim();
+            if (editedTask !== null && editedTask.trim() !== "") {
+                span.textContent = editedTask.trim();
+            }
         }
-    }
 
-    function removButt(button){
-        let li = button.parentElement;
-        Tasks.removeChild(li);
-    }
+        function removButt(button) {
+            let li = button.parentElement;
+            Tasks.removeChild(li);
+        }
 
-</script>
+    </script>
+
+</body>
+
 </html>
