@@ -1,4 +1,4 @@
-let man = 10;
+let man = 1;
 
 switch(man){
     case 7:
@@ -10,6 +10,9 @@ switch(man){
     case 9:
     case 10:
         console.log("sinal pego! muito forte..!")
+        break;
+    case man > 10 :
+        console.log('Sinal fora do comum, muito forte!')
         break;
         default :
         console.log("erro na busca de sinal.");         

@@ -8,3 +8,6 @@ function showPrimes(n) {
     alert( i ); // a prime
   }
 }
+
+showPrimes();
+console.log(showPrimes());

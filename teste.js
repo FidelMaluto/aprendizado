@@ -1,13 +1,13 @@
 // quantas palavras têm mais de cinco letras?
 
-const frase = "eu amo programar em javascript";
+const frase = "eu amor programar em javascript";
 
 const palavras = frase.split(" ");
 
 let contador = 0;
 
 for(const palavra of palavras){
-    if(palavra.length > 5){
+    if(palavra.length >= 5){
         contador++;
     }
 }
