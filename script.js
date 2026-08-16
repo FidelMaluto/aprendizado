@@ -7,7 +7,8 @@ function cadastra() {
     const li = document.createElement('li');
     li.id = 'li';
     li.innerHTML = `
-        <span>${task}</span><button>Eliminar</button>
+        <span>${task}</span>
+        <button class="exclui" onclick="excluiTask(this)">Eliminar</button>
     `;
 
     document.getElementById('lista').appendChild(li);
@@ -18,3 +19,8 @@ function cadastra() {
 document.getElementById('text').addEventListener('keypress', function (e) {
     if(e.key === 'Enter') cadastra();
 })
+
+function excluiTask(button) {
+    const li = button.parentElement;
+    document.getElementById('lista').removeChild(li);
+}
