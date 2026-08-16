@@ -35,6 +35,7 @@ button {
 
 ul {
     list-style: none;
+    padding: 0px;
 }
 
 ul li {
@@ -42,4 +43,6 @@ ul li {
     background-color: #ccc;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }

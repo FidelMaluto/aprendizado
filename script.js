@@ -7,7 +7,7 @@ function cadastra() {
     const li = document.createElement('li');
     li.id = 'li';
     li.innerHTML = `
-        <span>${task} <button>Eliminar</button></span>
+        <span>${task}</span><button>Eliminar</button>
     `;
 
     document.getElementById('lista').appendChild(li);
