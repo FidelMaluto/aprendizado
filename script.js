@@ -12,5 +12,5 @@ function cadastra() {
 }
 
 document.getElementById('text').addEventListener('keypress', function (e) {
-    if(e.key == '') cadastra();
+    if(e.key === 'Enter') cadastra();
 })
