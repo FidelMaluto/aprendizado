@@ -41,6 +41,14 @@ button {
     cursor: pointer;
     background-color: #ec0404;
 }
+.edit{
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #04ec17;
+}
 
 ul {
     list-style: none;
@@ -53,5 +61,6 @@ ul li {
     border-radius: 5px;
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 2px;
 }

@@ -8,6 +8,7 @@ function cadastra() {
     li.id = 'li';
     li.innerHTML = `
         <span>${task}</span>
+        <button class="edit" onclick="editTask(this)">Editar</button>
         <button class="exclui" onclick="excluiTask(this)">Eliminar</button>
     `;
 
