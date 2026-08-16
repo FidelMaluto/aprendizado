@@ -32,3 +32,18 @@ button {
     cursor: pointer;
     background-color: #069ef7;
 }
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 8px;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul li :hover {
+    background-color: aliceblue;
+}
