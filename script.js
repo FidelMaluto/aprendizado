@@ -6,7 +6,9 @@ function cadastra() {
 
     const li = document.createElement('li');
     li.id = 'li';
-    li.textContent = task;
+    li.innerHTML = `
+        <span>${task} <button>Eliminar</button></span>
+    `;
 
     document.getElementById('lista').appendChild(li);
 
