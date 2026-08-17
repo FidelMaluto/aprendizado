@@ -39,6 +39,20 @@
             border-radius: 4px;
             background-color: blueviolet;
         }
+
+        ol {
+            padding: 0px;
+        }
+
+        ol li {
+            justify-content: space-between;
+            display: flex;
+            padding: 8px;
+            background-color: #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 2px;
+        }
         
     </style>
     
@@ -51,7 +65,7 @@
             <button onclick="criarTarefa()">Criar</button>
         </div>
 
-        <ul id="tarefas"></ul>
+        <ol id="tarefas"></ol>
     </div>
 
     <script>
