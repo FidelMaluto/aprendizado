@@ -73,6 +73,9 @@
             const tarefas = document.getElementById('tarefas');
             const texto = document.getElementById('texto');
             const tarefa = texto.value.trim();
+
+            if (texto.value == '') return;
+            
             // Criando o elemento que irá receber o valor digitado no input
             const li = document.createElement('li');
             li.innerHTML = `
