@@ -92,6 +92,17 @@
             if (e.key === 'Enter') criarTarefa();
         });
 
+        function edit (button) {
+            let li = button.parentElement;
+            let span = li.querySelector('span');
+            let novaTarefa = prompt('Editar tarefa: ', span.textContent);
+
+            if (novaTarefa !== null && novaTarefa.trim() !== ''){
+                span.textContent = novaTarefa.trim();
+            };
+        };
+        
+        // eliminando tarefas
         function elim(button) {
             const li = button.parentElement;
             tarefas.removeChild(li);
