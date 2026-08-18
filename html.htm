@@ -74,6 +74,9 @@
             const texto = document.getElementById('texto');
             const tarefa = texto.value.trim();
 
+            // Simples validação
+            if (texto.value == '') return;
+            
             // Criandas lis
             const li = document.createElement('li');
             li.innerHTML = `
