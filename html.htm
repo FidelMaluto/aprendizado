@@ -102,6 +102,12 @@
                 span.textContent = novaTarefa.trim();
             }
         }
+
+        // Eliminar tarefas
+        function elim(button) {
+            const li = button.parentElement;
+            tarefas.removeChild(li);
+        }
         
     </script>
     
