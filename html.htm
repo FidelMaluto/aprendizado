@@ -91,6 +91,17 @@
         document.getElementById('texto').addEventListener('keypress', function (e){
             if (e.key === 'Enter') criarTarefa();
         });
+
+        // Editar tarefas
+        function edit(button){
+            let li = button.parentElement;
+            let span = li.querySelector('span');
+            let novaTarefa = prompt('Editar: ', span.textContent);
+
+            if (novaTarefa !== null && novaTarefa.trim() !== '') {
+                span.textContent = novaTarefa.trim();
+            }
+        }
         
     </script>
     
