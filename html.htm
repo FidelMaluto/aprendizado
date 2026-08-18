@@ -74,6 +74,13 @@
             const texto = document.getElementById('texto');
             const tarefa = texto.value.trim();
 
+            // Criandas lis
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <button class="edit" onclick="edit(this)">Editar</butto>
+                <button class="elim" onclick="elim(this)">Eliminar</butto>
+            `;
+
         }
     </script>
     
