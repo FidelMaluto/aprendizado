@@ -77,10 +77,14 @@
             // Criandas lis
             const li = document.createElement('li');
             li.innerHTML = `
+                <span>${tarefa}</span>
                 <button class="edit" onclick="edit(this)">Editar</butto>
                 <button class="elim" onclick="elim(this)">Eliminar</butto>
             `;
 
+            tarefas.appendChild(li);
+            texto.value = '';
+            
         }
     </script>
     
