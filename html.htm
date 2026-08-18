@@ -69,44 +69,6 @@
     </div>
 
     <script>
-        function criarTarefa() {
-            const tarefas = document.getElementById('tarefas');
-            const texto = document.getElementById('texto');
-            const tarefa = texto.value.trim();
-
-            if (texto.value == '') return;
-            
-            // Criando o elemento que irá receber o valor digitado no input
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <span>${tarefa}</span>
-                <button class='edit' onclick='edit(this)'>Editar</button>    
-                <button class='elim' onclick='elim(this)'>Eliminar</button>    
-            `;
-
-            tarefas.appendChild(li);
-            texto.value = '';
-        }
-        // Criando tarefas com um click no Enter
-        document.getElementById('texto').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') criarTarefa();
-        });
-
-        function edit (button) {
-            let li = button.parentElement;
-            let span = li.querySelector('span');
-            let novaTarefa = prompt('Editar tarefa: ', span.textContent);
-
-            if (novaTarefa !== null && novaTarefa.trim() !== ''){
-                span.textContent = novaTarefa.trim();
-            };
-        };
-        
-        // eliminando tarefas
-        function elim(button) {
-            const li = button.parentElement;
-            tarefas.removeChild(li);
-        }
         
     </script>
     
