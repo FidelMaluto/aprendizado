@@ -96,7 +96,11 @@
         });
 
         // Editar tarefas
-       
+       function edit(button) {
+        let li = button.parentElement;
+        let span = li.querySelector('span');
+        let novaTarefa = prompt('Editar: ', span.textContent);
+       }
 
         // Eliminar tarefas
         function elim(button) {
