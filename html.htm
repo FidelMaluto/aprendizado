@@ -32,6 +32,7 @@
             border-radius: 4px;
         }
 
+        /* Botões */
         button {
             cursor: pointer;
             padding: 10px;
@@ -40,11 +41,28 @@
             background-color: blueviolet;
         }
 
-        ol {
+        .edit {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(5, 136, 44);
+        }
+
+        .elim {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(126, 9, 9);
+        }
+        
+        ul {
+            list-style: none;
             padding: 0px;
         }
 
-        ol li {
+        ul li {
             justify-content: space-between;
             display: flex;
             padding: 8px;
@@ -65,7 +83,7 @@
             <button onclick="criarTarefa()">Criar</button>
         </div>
 
-        <ol id="tarefas"></ol>
+        <ul id="tarefas"></ul>
     </div>
 
     <script>
