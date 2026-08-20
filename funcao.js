@@ -1,14 +1,19 @@
 class Pessoa {
     constructor (nome, sobrenome) {
-        this.nome = nome,
+        this.nome = nome;
         this.sobrenome = sobrenome
     }
 
     nomeCompleto() {
-        console.log(this.nome + ' ' + this.sobrenome);
+       return `${this.nome} ${this.sobrenome}`;
+    }
+
+    correr () {
+       return `O ${this.nomeCompleto()}, está correndo!`;
     }
     
 }
 
 const p1 = new Pessoa("Fidel", "Lweji");
-console.log(p1.nomeCompleto());
+// p1.nomeCompleto();
+console.log(p1.correr());
