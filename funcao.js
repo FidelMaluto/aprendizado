@@ -31,6 +31,11 @@ class Pessoa {
     nomeCompleto () {
         return `${this.nome} ${this.sobrenome}`;
     }
+
+    falar () {
+        return `${this.nomeCompleto()} está falando sobre paixão...`;
+    }
+    
 }
 
 // Instância
@@ -38,4 +43,4 @@ const p1 = new Pessoa('Lweji', 'Fidel');
 const p2 = new Pessoa('Fidel', 'Lweji');
 
 console.log(p1.nomeCompleto());
-console.log(p2.nomeCompleto());
+console.log(p2.falar());
