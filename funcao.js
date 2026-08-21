@@ -18,5 +18,24 @@ class Cao {
 
 }
 
-const p1 = new Cao('Máx', 'Rafeiro');
-console.log(p1.descricao());
+const c1 = new Cao('Máx', 'Rafeiro');
+console.log(c1.descricao());
+
+// Criando a class anterior
+class Pessoa {
+    constructor (nome, sobrenome) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
+    nomeCompleto () {
+        return `${this.nome} ${this.sobrenome}`;
+    }
+}
+
+// Instância
+const p1 = new Pessoa('Lweji', 'Fidel');
+const p2 = new Pessoa('Fidel', 'Lweji');
+
+console.log(p1.nomeCompleto());
+console.log(p2.nomeCompleto());
