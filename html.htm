@@ -130,10 +130,10 @@
         // Editar tarefas
        function edit(button) {
         let li = button.parentElement;
-        let span = li.querySelector('span');
+        let span = li.querySelctor('span');
         let novaTarefa = prompt('Editar: ', span.textContent);
 
-        if (novaTarefa !== null && novaTarefa.trim() !== '') {
+        if (novaTarefa !== null || novaTarefa.trim() !== '') {
             span.textContent = novaTarefa.trim();
         }
         
