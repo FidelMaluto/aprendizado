@@ -1,23 +1,11 @@
-class Pessoa {
-    constructor (nome, sobrenome) {
+class Cao {
+    constructor (nome, raca) {
         this.nome = nome;
-        this.sobrenome = sobrenome
+        this.raca = raca;
     }
 
-    nomeCompleto() {
-       return `${this.nome} ${this.sobrenome}`;
-    }
 
-    correr () {
-       return `O ${this.nomeCompleto()}, está correndo!`;
-    }
-
-    dãnçar () {
-        return `${this.nome} está dançando com o JS!`;
-    }
-    
 }
 
-const p1 = new Pessoa("Fidel", "Lweji");
-// p1.nomeCompleto();
-console.log(p1.dãnçar());
+const p1 = new Cao('Máx', 'Rafeiro');
+console.log(p1);
