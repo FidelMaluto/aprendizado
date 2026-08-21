@@ -35,6 +35,10 @@ class Pessoa {
     falar () {
         return `${this.nomeCompleto()} está falando sobre paixão...`;
     }
+
+    falaOi () {
+        return `${this.falar()} oi função!`;
+    }
     
 }
 
@@ -43,4 +47,4 @@ const p1 = new Pessoa('Lweji', 'Fidel');
 const p2 = new Pessoa('Fidel', 'Lweji');
 
 console.log(p1.nomeCompleto());
-console.log(p2.falar());
+console.log(p2.falaOi());
