@@ -60,7 +60,7 @@
             border-radius: 4px;
             background-color: rgb(126, 9, 9);
         }
-        
+
         ul {
             list-style: none;
             padding: 0px;
@@ -77,16 +77,15 @@
         }
 
         h1 {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 2rem;
             text-align: center;
             color: #ccc;
             box-shadow: 30px 20px 40px #000;
             padding: 10px;
         }
-        
     </style>
-    
+
 </head>
 
 <body>
@@ -108,7 +107,7 @@
 
             // Simples validação
             if (texto.value == '') return;
-            
+
             // Criandas lis
             const li = document.createElement('li');
             li.innerHTML = `
@@ -119,34 +118,34 @@
 
             tarefas.appendChild(li);
             texto.value = '';
-            
+
         }
 
         // Criar com um click no Enter
-        document.getElementById('texto').addEventListener('keypress', function (e){
+        document.getElementById('texto').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') criarTarefa();
         });
 
         // Editar tarefas
-       function edit(button) {
-        let li = button.parentElement;
-        let span = li.querySelector('span');
-        let novaTarefa = prompt('Editar: ', span.textContent);
+        function edit(button) {
+            let li = button.parentElement;
+            let span = li.querySelector('span');
+            let novaTarefa = prompt('Editar: ', span.textContent);
 
-        if (novaTarefa !== null || novaTarefa.trim() !== '') {
-            span.textContent = novaTarefa.trim();
+            if (novaTarefa !== null || novaTarefa.trim() !== '') {
+                span.textContent = novaTarefa.trim();
+            }
+
         }
-        
-       }
 
         // Eliminar tarefas
         function elim(button) {
             const li = button.parentElement;
             tarefas.removeChild(li);
         }
-        
+
     </script>
-    
+
 </body>
 
 </html>
