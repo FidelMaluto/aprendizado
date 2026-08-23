@@ -6,7 +6,12 @@ const frutas = [
     "Manga"
 ];
 
-const pera = "Péra";
-frutas.push(pera);
+// const pera = "Péra";
+// frutas.push(pera);
+
+// POP --- Apaga o último elemento.
+frutas.pop(0);
+
+
 
 console.log(frutas);
