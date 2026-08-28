@@ -121,6 +121,10 @@
 
         }
 
+        // Tarefa com enter
+        document.getElementById('texto').addEventListener('keypress', (e) =>{
+            if (e.key === 'Enter') criarTarefa();
+        });
 
         // Editar tarefas
         function edit(button) {
