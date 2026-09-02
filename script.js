@@ -16,11 +16,15 @@ function cadastra() {
 
     text.value = '';
 }
-
+// Validar campo com Enter
 document.getElementById('text').addEventListener('keypress', function (e) {
-    if(e.key === 'Enter') cadastra();
-})
+    if (e.key === 'Enter') cadastra();
+});
 
+// Função para editar tarefa
+
+
+// Função para apagar tarefa
 function excluiTask(button) {
     const li = button.parentElement;
     document.getElementById('lista').removeChild(li);
