@@ -1,18 +1,15 @@
 // CONSUMINDO RECURSOS COM fetch();
 const url = 'http://localhost:3003/carros';
 
-async function chamarApi() {
+
+async function consumeAPI() {
     const resp = await fetch(url);
 
-    // Verificando o status
-    if(resp.status === 200){
-
-    // convertendo a respos em JSON
+    if(resp.status === 200) {
         const obj = await resp.json();
-
-        console.log(obj)
+        console.log(obj);
     }
-    
+
 }
 
-chamarApi();
+consumeAPI();
