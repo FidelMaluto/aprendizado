@@ -22,7 +22,16 @@ document.getElementById('text').addEventListener('keypress', function (e) {
 });
 
 // Função para editar tarefa
+function edit(button) {
+    const li = button.parentElement;
+    const span = li.querySelector('span');
+    const newTask = prompt('Editar: ', span.textContent);
 
+    if (newTask !== null && newTask.trim() === "") {
+        span.textContent = newTask.trim();
+    }
+    
+}
 
 // Função para apagar tarefa
 function excluiTask(button) {
