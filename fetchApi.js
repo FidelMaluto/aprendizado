@@ -1,5 +1,5 @@
 // CONSUMINDO RECURSOS COM fetch();
-const url = 'http://localhost:3003/carros';
+const url = 'https://jsonplaceholder.typicode.com/todos';
 
 // Função para consumir com FETCH
 async function consumeAPI() {
