@@ -46,6 +46,11 @@
             }
         }
 
+        function elim(butto) {
+            let li = butto.parentElement;
+            lista.removeChild(li);
+        }
+
         document.getElementById("text").addEventListener('keypress', function (e) {
             if(e.key === "Enter") cadastra();
         })
