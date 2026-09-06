@@ -1,4 +1,4 @@
-//! Simulador de saque
+// Simulador de saque
 
 // dado um valor a ser sacado
 // exiba quantas notas de 100, 50, 20, 10, 5, 2
@@ -6,7 +6,7 @@
 
 const notas = [5000, 2000, 1000, 500];
 
-let valor = 7200000;
+let valor = 8500;
 
 for (let i = 0; i < notas.length; i++) {
     let nota = notas[i];
@@ -14,6 +14,7 @@ for (let i = 0; i < notas.length; i++) {
     // calculando a quantidade de nota por valor
     let quantidade = Math.floor(valor / nota);
 
+    // Condição de cálculo e notas a levantar/retirar
     if (quantidade ==! valor) {
         console.log("Lamentamos, não temos essas notas!");
         return;
@@ -21,6 +22,7 @@ for (let i = 0; i < notas.length; i++) {
     } else {
         console.log(quantidade + " notas de " + nota);
     }
+
     // console.log(quantidade + " notas de " + nota);
     valor = valor % nota;
 }
