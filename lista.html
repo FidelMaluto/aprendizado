@@ -24,6 +24,8 @@
             const tarefa = text.value.trim();
             const li = document.createElement('li');
 
+            if (text.value === "") return;
+
             li.innerHTML = `
                 <span>${tarefa}</span>
                 <button class="edit" onclick="edit(this)">Editar</button>
