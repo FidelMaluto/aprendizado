@@ -1,5 +1,5 @@
 // CONSUMINDO RECURSOS COM fetch();
-const url = 'https://jsonplaceholder.typicode.com/todos';
+const url = 'https://conta.unitel.ao/MyUnitel/Users';
 
 // Função para consumir com FETCH
 async function consumir() {
