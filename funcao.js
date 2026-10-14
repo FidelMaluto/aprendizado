@@ -10,11 +10,11 @@ class Pessoa {
     }
 
     falar () {
-        return `${this.nomeCompleto()} está falando sobre paixão...`;
+        return `${this.nomeCompleto()} estão apaixonados...`;
     }
 
     falaOi () {
-        return `${this.falar()} oi função!`;
+        return `${this.falar()} Oi AMORES!`;
     }
     
 }
