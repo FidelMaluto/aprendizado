@@ -1,8 +1,8 @@
-function soma(a, b) {
+function multiplica(a, b) {
   function calculo() {
-    return a + b;
+    return a * b;
   }
   return calculo();
 }
 
-console.log(soma(1, 3));
+console.log("O resultado é: ", multiplica(3, 3));

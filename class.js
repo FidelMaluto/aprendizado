@@ -9,12 +9,12 @@ class Pessoa {
     return `${this.nome} ${this.sobrenome}`;
   }
 
-  falar() {
+  declarar() {
     return `${this.nomeCompleto()} estão apaixonados...`;
   }
 
   falaOi() {
-    return `${this.falar()} Oi AMORES!`;
+    return `${this.declarar()} Oi AMORES!`;
   }
 }
 
@@ -35,7 +35,16 @@ class Casal {
   chamarLove() {
     return `${this.fidel} muito vc ${this.lweji}`;
   }
+
+  thisIsLove() {
+    return `Isso é: ${this.lweji} te ${this.fidel}`;
+  }
+
+  love() {
+    return this.thisIsLove();
+  }
 }
 
 const fl = new Casal("Amo", "Amor");
 console.log(fl.chamarLove());
+console.log(fl.love());
