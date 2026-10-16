@@ -5,7 +5,7 @@ function showPrimes(n) {
       if (i % j == 0) continue nextPrime;
     }
 
-    alert( i ); // a prime
+    return i ; // a prime
   }
 }
 
