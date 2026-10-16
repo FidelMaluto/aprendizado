@@ -9,20 +9,19 @@ const notas = [5000, 2000, 1000, 500];
 let valor = 8500;
 
 for (let i = 0; i < notas.length; i++) {
-    let nota = notas[i];
+  let nota = notas[i];
 
-    // calculando a quantidade de nota por valor
-    let quantidade = Math.floor(valor / nota);
+  // calculando a quantidade de nota por valor
+  let quantidade = Math.floor(valor / nota);
 
-    // Condição de cálculo e notas a levantar/retirar
-    if (quantidade ==! valor) {
-        console.log("Lamentamos, não temos essas notas!");
-        return;
-        
-    } else {
-        console.log(quantidade + " notas de " + nota);
-    }
+  // Condição de cálculo e notas a levantar/retirar
+  if (quantidade == !valor) {
+    console.log("Lamentamos, não temos essas notas!");
+    return;
+  } else {
+    console.log(quantidade + " notas de " + nota);
+  }
 
-    // console.log(quantidade + " notas de " + nota);
-    valor = valor % nota;
+  // console.log(quantidade + " notas de " + nota);
+  valor = valor % nota;
 }

@@ -1,150 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treino de lógica</title>
 
     <style>
-        body {
-            background-color: blueviolet;
-        }
+      body {
+        background-color: blueviolet;
+      }
 
-        .main {
-            margin: 20px auto;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 8px;
-            width: 50%;
-            box-shadow: 12px 10px 8px #000;
-        }
+      .main {
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        width: 50%;
+        box-shadow: 12px 10px 8px #000;
+      }
 
-        .in {
-            display: flex;
-            justify-content: space-between;
-            padding: 6px;
-        }
+      .in {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px;
+      }
 
-        input {
-            width: 80%;
-            padding: 10px;
-            outline: none;
-            border: 1px solid #000;
-            margin-right: 3px;
-            border-radius: 4px;
-        }
+      input {
+        width: 80%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #000;
+        margin-right: 3px;
+        border-radius: 4px;
+      }
 
-        /* Botões */
-        .button {
-            width: 30%;
-            cursor: pointer;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: blueviolet;
-        }
+      /* Botões */
+      .button {
+        width: 30%;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: blueviolet;
+      }
 
-        .edit {
-            cursor: pointer;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: rgb(5, 136, 44);
-        }
+      .edit {
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(5, 136, 44);
+      }
 
-        .elim {
-            cursor: pointer;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: rgb(126, 9, 9);
-        }
+      .elim {
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(126, 9, 9);
+      }
 
-        ul {
-            list-style: none;
-            padding: 0px;
-        }
+      ul {
+        list-style: none;
+        padding: 0px;
+      }
 
-        ul li {
-            justify-content: space-between;
-            display: flex;
-            padding: 8px;
-            background-color: #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 2px;
-        }
+      ul li {
+        justify-content: space-between;
+        display: flex;
+        padding: 8px;
+        background-color: #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 2px;
+      }
 
-        h1 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 2rem;
-            text-align: center;
-            color: #ccc;
-            box-shadow: 30px 20px 40px #000;
-            padding: 10px;
-        }
+      h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        color: #ccc;
+        box-shadow: 30px 20px 40px #000;
+        padding: 10px;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-    <h1>Lista de tarefas simples pra  aquecer os dedos!</h1>
+  <body>
+    <h1>Lista de tarefas simples pra aquecer os dedos!</h1>
     <div class="main">
-        <div class="in">
-            <input type="text" id="texto" placeholder="digite tarefa...">
-            <button class="button" onclick="criarTarefa()">Criar</button>
-        </div>
+      <div class="in">
+        <input type="text" id="texto" placeholder="digite tarefa..." />
+        <button class="button" onclick="criarTarefa()">Criar</button>
+      </div>
 
-        <ul id="tarefas"></ul>
+      <ul id="tarefas"></ul>
     </div>
 
     <script>
-        function criarTarefa() {
-            const tarefas = document.getElementById('tarefas');
-            const texto = document.getElementById('texto');
-            const tarefa = texto.value.trim();
+      function criarTarefa() {
+        const tarefas = document.getElementById("tarefas");
+        const texto = document.getElementById("texto");
+        const tarefa = texto.value.trim();
 
-            // Simples validação
-            if (texto.value == '') return;
+        // Simples validação
+        if (texto.value == "") return;
 
-            // Criandas lis
-            const li = document.createElement('li');
-            li.innerHTML = `
+        // Criandas lis
+        const li = document.createElement("li");
+        li.innerHTML = `
                 <span>${tarefa}</span>
                 <button class="edit" onclick="edit(this)">Editar</butto>
                 <button class="elim" onclick="elim(this)">Eliminar</butto>
             `;
 
-            tarefas.appendChild(li);
-            texto.value = '';
+        tarefas.appendChild(li);
+        texto.value = "";
+      }
 
+      // Tarefa com enter
+      document.getElementById("texto").addEventListener("keypress", (e) => {
+        if (e.key === "Enter") criarTarefa();
+      });
+
+      // Editar tarefas
+      function edit(button) {
+        let li = button.parentElement;
+        let span = li.querySelector("span");
+        let novaTarefa = prompt("Edite: ", span.textContent);
+
+        if (novaTarefa !== null && novaTarefa.trim() !== "") {
+          span.textContent = novaTarefa.trim();
         }
+      }
 
-        // Tarefa com enter
-        document.getElementById('texto').addEventListener('keypress', (e) =>{
-            if (e.key === 'Enter') criarTarefa();
-        });
-
-        // Editar tarefas
-        function edit(button) {
-            let li = button.parentElement;
-            let span = li.querySelector('span');
-            let novaTarefa = prompt('Edite: ', span.textContent);
-
-            if (novaTarefa !== null && novaTarefa.trim() !==''){
-                span.textContent = novaTarefa.trim();
-            }
-        }
-
-        // Eliminar tarefas
-        function elim(button) {
-            let li = button.parentElement;
-            tarefas.removeChild(li);
-        }
-
+      // Eliminar tarefas
+      function elim(button) {
+        let li = button.parentElement;
+        tarefas.removeChild(li);
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

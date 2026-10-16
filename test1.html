@@ -1,19 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>testes</title>
+  </head>
 
-</head>
+  <body></body>
 
-<body>
-    
-</body>
-
-<script>
-    
+  <script>
     //localStorage.setItem('teste: ', 1);
     //alert(localStorage.getItem('teste') );
 
@@ -24,9 +19,9 @@
     //document.write(localStorage.test);
 
     //remove key
-   //delete localStorage.test;
+    //delete localStorage.test;
 
-   /**let key = 'length';
+    /**let key = 'length';
     localStorage[key] = 0;
 
     console.log(key)*/
@@ -36,20 +31,20 @@
         let key = localStorage.key(i);
         alert(`${key} : ${localStorage.getItem(key)}`)
     }*/
-    
-  /* //boscando todos os últimos registros do localstorege na máquina!! 
+
+    /* //boscando todos os últimos registros do localstorege na máquina!! 
    for(let key in localStorage){
     alert(key);
    }*/
 
-   //boscando todos os últimos registos cadastrados em nos respectivos campos do localstorege na máquina!! 
-  /*for(let key in localStorage){
+    //boscando todos os últimos registos cadastrados em nos respectivos campos do localstorege na máquina!!
+    /*for(let key in localStorage){
     if(!localStorage.hasOwnProperty(key)){
         continue;
     }
         alert(`${key} : ${localStorage.getItem(key)}`)
   }*/
- /*
+    /*
     //boscando todos os últimos(recentes) registos cadastrados em nos respectivos campos 
     // do localstorege na máquina!! com (OBJECT.keys) 
     let keys = Object.keys(localStorage);
@@ -81,7 +76,5 @@
     alert(event.key + " : " + event.newValue + " at " + event.url);
    };
    localStorage.setItem('now', Date.now());*/
-
-</script>
-
+  </script>
 </html>

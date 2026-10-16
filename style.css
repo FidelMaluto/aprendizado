@@ -1,66 +1,66 @@
 body {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 .main {
-    margin: 30px auto;
-    width: 20rem;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 4px 3px 6px black;
+  margin: 30px auto;
+  width: 20rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 4px 3px 6px black;
 }
 
 .tool {
-    text-align: center;
-    padding: 8px;
+  text-align: center;
+  padding: 8px;
 }
 
 input {
-    padding: 8px;
-    border: none;
-    outline: none;
-    background-color: #ccc;
-    border-radius: 4px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background-color: #ccc;
+  border-radius: 4px;
 }
 
 button {
-    padding: 8px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #069ef7;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #069ef7;
 }
 
-.exclui{
-    padding: 8px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #ec0404;
+.exclui {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ec0404;
 }
-.edit{
-    padding: 8px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #04ec17;
+.edit {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #04ec17;
 }
 
 ul {
-    list-style: none;
-    padding: 0px;
+  list-style: none;
+  padding: 0px;
 }
 
 ul li {
-    padding: 8px;
-    background-color: #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2px;
+  padding: 8px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2px;
 }
