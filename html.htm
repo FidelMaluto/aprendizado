@@ -98,6 +98,7 @@
     </div>
 
     <script>
+      
       function criarTarefa() {
         const tarefas = document.getElementById("tarefas");
         const texto = document.getElementById("texto");
@@ -129,6 +130,7 @@
         let span = li.querySelector("span");
         let novaTarefa = prompt("Edite: ", span.textContent);
 
+        // Condição da edição
         if (novaTarefa !== null && novaTarefa.trim() !== "") {
           span.textContent = novaTarefa.trim();
         }
