@@ -1,9 +1,11 @@
+// Função para criar nova tarefa
 function cadastra() {
   const text = document.getElementById("text");
   const task = text.value.trim();
 
   if (text.value == "") return;
 
+  // Apresentando a tarefa no document
   const li = document.createElement("li");
   li.id = "li";
   li.innerHTML = `
@@ -16,6 +18,7 @@ function cadastra() {
 
   text.value = "";
 }
+
 // Validar campo com Enter
 document.getElementById("text").addEventListener("keypress", function (e) {
   if (e.key === "Enter") cadastra();
