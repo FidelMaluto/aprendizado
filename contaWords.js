@@ -1,8 +1,8 @@
 // quantas palavras têm mais de cinco letras?
 
-const frase = "eu amor programar em javascript";
+const frase = "eu,amores,programar,em,javascript";
 
-const palavras = frase.split(" ");
+const palavras = frase.split(",");
 
 let contador = 0;
 
