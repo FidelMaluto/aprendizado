@@ -1,6 +1,7 @@
-let man = 1;
+let signal = 11;
 
-switch (man) {
+// Estruta condicional (usando o Switch - case).
+switch (signal) {
   case 7:
     console.log("sinal fraco!");
     break;
@@ -11,7 +12,8 @@ switch (man) {
   case 10:
     console.log("sinal pego! muito forte..!");
     break;
-  case man > 10:
+  // tentando adicionar um novo case, com sinal de maior... sem suceesso
+  case signal > 10:
     console.log("Sinal fora do comum, muito forte!");
     break;
   default:
