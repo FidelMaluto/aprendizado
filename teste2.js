@@ -1,3 +1,4 @@
+// Função mostrar
 function showPrimes(n) {
   nextPrime: for (let i = 2; i < n; i++) {
     for (let j = 2; j < i; j++) {
@@ -8,5 +9,6 @@ function showPrimes(n) {
   }
 }
 
+// Imprimindo e chamando a função!
 showPrimes();
 console.log(showPrimes());
