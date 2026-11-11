@@ -13,7 +13,7 @@ function cadastra() {
   li.innerHTML = `
                 <span>${tarefa}</span>
                 <button class="edit" onclick="edit(this)">Editar</button>
-                <button class="elim" onclick="elim(this)">Eliminar</button>
+                <button class="excluir" onclick="excluir(this)">Excluir</button>
             `;
   // Colocando as tarefas na ul e esvaziar o campo
   lista.appendChild(li);
@@ -33,7 +33,7 @@ function edit(butto) {
 }
 
 // Função deletar taarefas
-function elim(butto) {
+function excluir(butto) {
   let li = butto.parentElement;
   lista.removeChild(li);
 }
