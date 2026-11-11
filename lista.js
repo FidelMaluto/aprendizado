@@ -34,8 +34,12 @@ function edit(butto) {
 
 // Função deletar taarefas
 function excluir(butto) {
-  let li = butto.parentElement;
-  lista.removeChild(li);
+  let delet = confirm("Prentendes excluir a tarefa?");
+
+  if (delet) {
+    let li = butto.parentElement;
+    lista.removeChild(li);
+  }
 }
 
 // Cadastrar tarefas com um click no Enter
